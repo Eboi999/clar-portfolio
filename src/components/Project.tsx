@@ -11,11 +11,11 @@ function Project() {
         <h1>Personal Projects</h1>
         <div className="projects-grid">
             <div className="project-tile">
-                <a href="" target="_blank" rel="noreferrer" className="tile-image-link">
+                <a href="https://github.com/Eboi999/ecofetch-baby" target="_blank" rel="noreferrer" className="tile-image-link">
                     <img src={mock11} alt="ECOFETCH" />
                 </a>
                 <div className="tile-body">
-                    <a href="" target="_blank" rel="noreferrer"><h2>ECOFETCH</h2></a>
+                    <a href="https://github.com/Eboi999/ecofetch-baby" target="_blank" rel="noreferrer"><h2>ECOFETCH</h2></a>
                     <p>This application is designed to streamline and optimize garbage collection within local communities. It focuses on efficiency and ease of use while also creating opportunities for unemployed individuals to participate in maintaining cleaner, healthier environments.</p>
                 </div>
             </div>
