@@ -1,0 +1,119 @@
+.certificates-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+    text-align: left;
+}
+
+.certificates-container .certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.certificate-tile {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #1a1d23;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certificate-tile:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.tile-image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 0;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.tile-image-wrap img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.certificate-tile:hover .tile-image-wrap img {
+    transform: scale(1.08);
+}
+
+.certificate-tile .tile-body {
+    padding: 0 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate-tile .tile-body h2 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+}
+
+.certificate-tile .tile-body p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    flex: 1;
+}
+
+.light-mode .certificate-tile {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.light-mode .certificate-tile:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.light-mode .tile-image-wrap {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+@media screen {
+    @media (max-width: 992px) {
+        .certificates-container .certificates-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .certificates-container {
+            padding: 5% 5%;
+        }
+
+        .certificates-container .certificates-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .tile-image-wrap img {
+            max-width: 120px;
+        }
+
+        .certificate-tile .tile-body {
+            padding: 0 14px 16px;
+        }
+
+        .certificate-tile .tile-body h2 {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .certificates-container .certificates-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+}
